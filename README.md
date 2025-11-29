@@ -37,3 +37,11 @@ Please check [Contributing](./CONTRIBUTING.MD) and [how to participate](./docs/h
 #### Reviewer
 
 Please check [Reviewier Guidelines](./REVIEW_GUIDELINES.md)
+
+### Frequently Asked Questions
+
+Please check [FAQ](./docs/faq.md)
+
+### Contact
+
+Here's a LIB that contains all my [social accounts](https://mainstack.com/engineeringwithtemi). I can be reached via those channels. Thanks.
