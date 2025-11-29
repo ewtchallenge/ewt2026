@@ -54,7 +54,7 @@ EWT2026 is a year-long coding challenge where you build 12 real-world projects (
 
 #### 3. Ask Clarifying Questions
 
-- **For official requirement clarifications**: Open an [Issue using the Project Question template](../../issues/new/choose)
+- **For official requirement clarifications**: Open an [Issue using the Project Question template](/../../issues/new/choose)
 - **For general discussion**: Use the monthly Discussion category (e.g., January 2026)
 - **For community help**: Use the Q&A or General discussion categories
 - **Check existing questions first** to avoid duplicates
@@ -556,7 +556,7 @@ All participants must follow our [Code of Conduct](../CODE_OF_CONDUCT.md):
 
 **For Project Questions:**
 
-- Official clarifications: [Create a Project Question Issue](../../issues/new/choose)
+- Official clarifications: [Create a Project Question Issue](/../../issues/new/choose)
 - General discussion: Monthly Discussion category
 - Technical help: Q&A Discussion category
 
