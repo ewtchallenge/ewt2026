@@ -1,0 +1,63 @@
+name: Validate Submission
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Validate submission structure
+        run: |
+          # Check that PR only modifies files in submissions/[username]/
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          # Get changed files
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+
+          # Check each file
+          INVALID=0
+          for file in $CHANGED_FILES; do
+            # Allow changes only in:
+            # 1. [month]-2026/submissions/[PR_AUTHOR]/
+            # 2. Nowhere else
+            
+            if [[ ! "$file" =~ ^[a-z]+-2026/submissions/${PR_AUTHOR}/ ]]; then
+              echo "❌ Invalid file location: $file"
+              echo "You can only modify files in: [month]-2026/submissions/${PR_AUTHOR}/"
+              INVALID=1
+            fi
+          done
+
+          if [ $INVALID -eq 1 ]; then
+            echo "::error::Submission validation failed. Please only modify files in your personal folder."
+            exit 1
+          fi
+
+          echo "✅ Submission structure is valid!"
+
+      - name: Check for required README
+        run: |
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          # Find which month folder was modified
+          MONTH_FOLDER=$(git diff --name-only origin/main...HEAD | grep -o '^[a-z]*-2026' | head -1)
+
+          if [ -z "$MONTH_FOLDER" ]; then
+            echo "::error::Could not determine month folder"
+            exit 1
+          fi
+
+          README_PATH="${MONTH_FOLDER}/submissions/${PR_AUTHOR}/README.md"
+
+          if [ ! -f "$README_PATH" ]; then
+            echo "::error::Missing required README.md at $README_PATH"
+            exit 1
+          fi
+
+          echo "✅ README.md found!"

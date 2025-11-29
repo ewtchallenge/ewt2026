@@ -1,0 +1,222 @@
+name: Reviewer Volunteer Application
+description: Apply to become a code reviewer for EWT2026
+title: "Reviewer Application - [Your Name]"
+labels: ["reviewer-application", "needs-review"]
+assignees:
+  - engineeringwithtemi
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank You for Volunteering! 🎉
+
+        We're excited that you want to help other engineers grow! Please fill out this application so we can learn about your background and expertise.
+
+        **Before you continue:**
+        - [ ] I have read the [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md)
+        - [ ] I have read the [REVIEW_GUIDELINES.md](../REVIEW_GUIDELINES.md)
+        - [ ] I understand this is a volunteer position
+
+  - type: input
+    id: full-name
+    attributes:
+      label: Full Name
+      description: What should we call you?
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: github-username
+    attributes:
+      label: GitHub Username
+      description: Your GitHub username (without @)
+      placeholder: janedoe
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location/Timezone
+      description: Optional - helps with coordination
+      placeholder: "London, UK (GMT) or New York, USA (EST)"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: years-experience
+    attributes:
+      label: Years of Professional/Relevant Experience
+      description: How many years have you been coding professionally or on significant projects?
+      options:
+        - "2-3 years"
+        - "3-5 years"
+        - "5-7 years"
+        - "7-10 years"
+        - "10+ years"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: primary-expertise
+    attributes:
+      label: Primary Expertise
+      description: Select ALL languages/technologies you're most confident reviewing (2+ years experience)
+      options:
+        - label: JavaScript
+        - label: TypeScript
+        - label: Python
+        - label: Rust
+        - label: Go
+        - label: Java
+        - label: C#
+        - label: C/C++
+        - label: Ruby
+        - label: PHP
+        - label: Swift
+        - label: Kotlin
+        - label: Other (specify in "Additional Info" below)
+
+  - type: checkboxes
+    id: frameworks
+    attributes:
+      label: Frameworks & Tools
+      description: Select frameworks/tools you have strong experience with
+      options:
+        - label: React
+        - label: Vue.js
+        - label: Angular
+        - label: Node.js
+        - label: Django
+        - label: Flask
+        - label: FastAPI
+        - label: Spring Boot
+        - label: .NET
+        - label: Ruby on Rails
+        - label: Express.js
+        - label: Next.js
+        - label: Docker
+        - label: Kubernetes
+        - label: AWS
+        - label: Azure
+        - label: GCP
+        - label: Other (specify below)
+
+  - type: textarea
+    id: professional-background
+    attributes:
+      label: Professional Background
+      description: Brief overview of your professional experience (current role, relevant experience, notable projects)
+      placeholder: |
+        Currently: Senior Software Engineer at Tech Company
+        Previously: Full-stack developer at Startup Inc.
+        Notable projects: Built scalable microservices handling 1M+ requests/day, contributed to open-source project X
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-review-experience
+    attributes:
+      label: Code Review Experience
+      description: Describe your experience with code reviews, mentoring, or teaching
+      placeholder: |
+        - Review 10-15 PRs per week at current job
+        - Mentored 3 junior developers over the past year
+        - Contributed reviews to open-source projects: [project names]
+        - Led code review workshops at company
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why I Want to Review
+      description: What motivates you to volunteer as a reviewer?
+      placeholder: |
+        I want to give back to the community that helped me learn. I also enjoy mentoring and find that reviewing others' code helps me become a better engineer myself.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: time-commitment
+    attributes:
+      label: Estimated Time Commitment
+      description: How much time can you commit per month?
+      options:
+        - "2-3 hours per month (2-3 reviews)"
+        - "4-6 hours per month (4-6 reviews)"
+        - "7-10 hours per month (7-10 reviews)"
+        - "10+ hours per month (flexible)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: review-preferences
+    attributes:
+      label: Review Preferences
+      description: What types of reviews are you most interested in?
+      options:
+        - label: DRAFT submissions (early feedback)
+        - label: FINAL submissions (comprehensive review)
+        - label: Both DRAFT and FINAL
+        - label: Follow-up reviews (adding to AI reviews)
+        - label: Any/all types
+
+  - type: textarea
+    id: preferred-technologies
+    attributes:
+      label: Technologies I'm Most Excited to Review
+      description: Which specific technologies, languages, or project types are you most interested in reviewing?
+      placeholder: |
+        - Backend services in Python/Go
+        - React applications
+        - DevOps/infrastructure projects
+        - CLI tools in Rust
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Anything else we should know? (Links to portfolio, GitHub profile highlights, blog posts you've written, etc.)
+      placeholder: |
+        - Blog: myblog.com
+        - Open source contributions: github.com/username/project
+        - Conference talks: [links]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgments
+    attributes:
+      label: Acknowledgments
+      description: Please confirm you've read and agree to the following
+      options:
+        - label: I have read and agree to follow the CODE_OF_CONDUCT.md
+          required: true
+        - label: I have read and will follow the REVIEW_GUIDELINES.md
+          required: true
+        - label: I commit to providing respectful, constructive, and helpful reviews
+          required: true
+        - label: I understand this is a volunteer position with no financial compensation
+          required: true
+        - label: I can commit to the estimated time indicated above
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        ## What Happens Next?
+
+        1. **Review**: We'll review your application within 3-5 business days
+        2. **Follow-up**: We may ask clarifying questions in this issue
+        3. **Approval**: If approved, you'll be added as a collaborator with write access
+        4. **Onboarding**: You'll receive access to reviewer channels and resources
+        5. **Start Reviewing**: You can begin reviewing submissions!
+
+        Thank you for your interest in helping the EWT2026 community! 🚀

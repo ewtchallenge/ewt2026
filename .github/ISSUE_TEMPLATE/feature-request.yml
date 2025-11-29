@@ -1,0 +1,95 @@
+name: Feature Request or Suggestion
+description: Suggest an improvement or new feature for EWT2026
+title: "[FEATURE] [Brief Description]"
+labels: ["enhancement", "suggestion"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request or Suggestion
+
+        We're always looking to improve EWT2026! Share your ideas for:
+        - New features
+        - Process improvements
+        - Better documentation
+        - Automation opportunities
+        - Community enhancements
+
+  - type: dropdown
+    id: suggestion-type
+    attributes:
+      label: Type of Suggestion
+      options:
+        - "New Feature"
+        - "Process Improvement"
+        - "Documentation Enhancement"
+        - "Automation/Tooling"
+        - "Community/Communication"
+        - "Review Process"
+        - "Participant Experience"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Opportunity
+      description: What problem does this solve, or what opportunity does it create?
+      placeholder: Currently, [situation]. This causes [problem] or misses [opportunity]...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: What's your idea for addressing this?
+      placeholder: I suggest we...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: How would this improve EWT2026?
+      placeholder: |
+        This would:
+        - Help participants by...
+        - Make reviewers' lives easier by...
+        - Improve the overall experience by...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you thought of other ways to solve this?
+      placeholder: Alternative approaches could include...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Examples, mockups, links to similar implementations, etc.
+      placeholder: |
+        - Similar feature in project X: [link]
+        - Example of how it could work: [description]
+        - Mockup: [image or link]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: volunteer
+    attributes:
+      label: Contribution
+      description: Would you like to help implement this?
+      options:
+        - label: I'm willing to help implement this feature
+        - label: I can help with documentation
+        - label: I can help with testing

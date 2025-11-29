@@ -1,0 +1,21 @@
+# CODEOWNERS file for EWT2026
+
+# This file defines who gets automatically requested for review on PRs
+
+# Default owners for everything in the repo
+
+# These are the primary maintainers
+
+- @engineeringwithtemi
+
+# Documentation and guidelines
+
+\*.md @engineeringwithtemi
+/docs/\*\* @engineeringwithtemi
+CODE_OF_CONDUCT.md @engineeringwithtemi
+REVIEW_GUIDELINES.md @engineeringwithtemi
+CONTRIBUTING.md @engineeringwithtemi
+
+# GitHub configuration
+
+/.github/\*\* @engineeringwithtemi

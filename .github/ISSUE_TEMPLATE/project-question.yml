@@ -1,0 +1,92 @@
+name: Project Question
+description: Ask questions about a specific month's project requirements
+title: "[MONTH] Question: [Brief Description]"
+labels: ["question", "project-clarification"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Project Question
+
+        Use this template to ask questions about project requirements, clarifications on specifications, or technical guidance for a specific month's challenge.
+
+        **Before asking:**
+        - Check the project's README in the month folder
+        - Search existing issues and discussions
+        - Review the project announcement video (if available)
+
+  - type: dropdown
+    id: project-month
+    attributes:
+      label: Which Project?
+      description: Select the month/project your question is about
+      options:
+        - "January 2026"
+        - "February 2026"
+        - "March 2026"
+        - "April 2026"
+        - "May 2026"
+        - "June 2026"
+        - "July 2026"
+        - "August 2026"
+        - "September 2026"
+        - "October 2026"
+        - "November 2026"
+        - "December 2026"
+        - "General Question (not month-specific)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: What type of question is this?
+      options:
+        - "Project Requirements Clarification"
+        - "Technical Approach Guidance"
+        - "Submission Process"
+        - "Tools/Technologies to Use"
+        - "Edge Cases or Scenarios"
+        - "Timeline or Deadlines"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Ask your question clearly and with as much context as possible
+      placeholder: |
+        I'm working on the January 2026 project and I'm not sure if...
+
+        Specifically, I'd like to know whether...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any additional information that might help us answer your question
+      placeholder: |
+        - What you've tried so far
+        - Relevant section of the project brief
+        - Your current understanding
+        - Links to related issues or discussions
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have read the project README for this month
+          required: true
+        - label: I have searched existing issues for similar questions
+          required: true
+        - label: I have checked GitHub Discussions
+          required: false
