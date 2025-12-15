@@ -62,7 +62,8 @@ This ensures zero merge conflicts!
    - Click "New Pull Request"
    - Select your branch
    - Fill out the PR template completely
-   - Add `[DRAFT]` or `[FINAL]` to the title
+   - Click the arrow next to "Create pull request" to select **Draft** for initial feedback
+   - Or click "Create pull request" for **Final** submission
 
 ## Issues vs Discussions: When to Use What
 
@@ -102,15 +103,15 @@ We use both GitHub Issues and Discussions to organize different types of communi
 
 ### Draft vs Final Submissions
 
-**[DRAFT] Submissions:**
+**Draft Pull Requests:**
 
 - For early feedback
 - Primarily reviewed by AI
 - Optional human review
 - Can be updated freely
-- Remove `[DRAFT]` tag when ready for final review
+- Click "Ready for review" when complete
 
-**[FINAL] Submissions:**
+**Final Submissions (Ready for Review):**
 
 - Ready for human reviewer feedback
 - Should be complete and tested

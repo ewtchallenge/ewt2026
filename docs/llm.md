@@ -162,11 +162,11 @@ Each month folder (e.g., `/january-2026/`) contains:
 6. **Commit and push** to their fork
 7. **Create PR** to original repo's `main` branch
 8. **Fill PR template** completely
-9. **Submit** as [DRAFT] or [FINAL]
+9. **Submit** as **Draft PR** or **Open PR**
 
 ### Submission Types
 
-**[DRAFT] Submission:**
+**Draft Pull Request:**
 
 - Purpose: Early feedback, direction validation
 - Review: AI-first, optional human review
@@ -174,7 +174,7 @@ Each month folder (e.g., `/january-2026/`) contains:
 - Updates: Freely allowed
 - Priority: Lower priority for human review
 
-**[FINAL] Submission:**
+**Final Submission (Ready for Review):**
 
 - Purpose: Comprehensive human review
 - Review: Human reviewers prioritized
@@ -182,9 +182,9 @@ Each month folder (e.g., `/january-2026/`) contains:
 - Updates: Allowed but may not be re-reviewed
 - Priority: High priority for human review
 
-**Converting DRAFT to FINAL:**
+**Converting Draft to Final:**
 
-- Change PR title: Remove `[DRAFT]` or add `[FINAL]`
+- Click "Ready for review" button on the PR
 - Comment: "Ready for final review!"
 
 ### Required Submission Contents

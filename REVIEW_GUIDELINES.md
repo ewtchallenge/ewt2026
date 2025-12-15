@@ -432,7 +432,7 @@ Concepts to explore:
 
 ## Special Cases
 
-### DRAFT Submissions
+### DRAFT Submissions (Draft PRs)
 
 - Expect incomplete or work-in-progress code
 - Focus on direction and approach
@@ -528,7 +528,7 @@ Most reviews should be standard. Don't feel pressure to write novels!
 ### Prioritization
 
 1. **FINAL** submissions without human review
-2. **DRAFT** submissions that need guidance
+2. **Draft PRs** that need guidance
 3. Additional context on AI reviews
 4. **FINAL** submissions that already have one review
 

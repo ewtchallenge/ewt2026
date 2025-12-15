@@ -291,10 +291,12 @@ Submit early for AI review and optional human feedback:
    - Base branch: `main`
    - Head repository: `YOUR-USERNAME/ewt2026`
    - Compare branch: `january-submission` (or whatever you named it)
-6. **Click "Create pull request"**
-7. **Title:** `[DRAFT] January 2026 - Your Name`
-8. **Fill out the PR template completely**
-9. **Submit**
+6. **Click the dropdown arrow next to "Create pull request"**
+7. **Select "Create draft pull request"**
+8. **Click "Draft pull request"**
+9. **Title:** `January 2026 - Your Name` (No tags needed)
+10. **Fill out the PR template completely**
+11. **Submit**
 
 **Draft Benefits:**
 
@@ -307,25 +309,20 @@ Submit early for AI review and optional human feedback:
 
 When you're ready for comprehensive human review:
 
-**Option 1: Update Draft to Final**
+**Option 1: Convert Draft to Final**
 
-```markdown
-# In your PR, update the title:
-
-Old: [DRAFT] January 2026 - Your Name
-New: [FINAL] January 2026 - Your Name
-
-# Add a comment:
-
-@engineeringwithtemi Ready for final review!
-```
+1. Go to your PR page
+2. Click the "Ready for review" button (usually near the bottom or in the merge box)
+3. Add a comment:
+   ```markdown
+   @engineeringwithtemi Ready for final review!
+   ```
 
 **Option 2: New Final Submission**
 
-- Follow the same PR process as Draft
-- Title: `[FINAL] January 2026 - Your Name`
+- Follow the same PR process but select "Create pull request" (not draft)
+- Title: `January 2026 - Your Name`
 - Fill out PR template
-- Mark as ready for review
 
 **Final Submission Checklist:**
 
@@ -336,7 +333,7 @@ New: [FINAL] January 2026 - Your Name
 - [ ] No sensitive information (API keys, passwords)
 - [ ] All files in correct folder: `/month-2026/submissions/your-username/`
 - [ ] PR template completely filled out
-- [ ] Title has `[FINAL]` tag (or no `[DRAFT]` tag)
+- [ ] PR is marked as "Ready for review" (not Draft)
 
 ---
 
@@ -744,7 +741,7 @@ After the month's deadline:
 
 - [ ] Created PR to main repository
 - [ ] Filled out PR template
-- [ ] Added [DRAFT] or [FINAL] tag
+- [ ] PR is Open (Draft or Ready for Review)
 - [ ] Double-checked everything
 
 **After Submission:**
