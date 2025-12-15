@@ -17,7 +17,6 @@ body:
         - [ ] I have read the [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md)
         - [ ] I have read the [REVIEW_GUIDELINES.md](../REVIEW_GUIDELINES.md)
         - [ ] I understand this is a volunteer position
-
   - type: input
     id: full-name
     attributes:
@@ -35,7 +34,6 @@ body:
       placeholder: janedoe
     validations:
       required: true
-
   - type: input
     id: location
     attributes:
@@ -44,7 +42,6 @@ body:
       placeholder: "London, UK (GMT) or New York, USA (EST)"
     validations:
       required: false
-
   - type: dropdown
     id: years-experience
     attributes:
@@ -58,7 +55,6 @@ body:
         - "10+ years"
     validations:
       required: true
-
   - type: checkboxes
     id: primary-expertise
     attributes:
@@ -78,32 +74,6 @@ body:
         - label: Swift
         - label: Kotlin
         - label: Other (specify in "Additional Info" below)
-
-  - type: checkboxes
-    id: frameworks
-    attributes:
-      label: Frameworks & Tools
-      description: Select frameworks/tools you have strong experience with
-      options:
-        - label: React
-        - label: Vue.js
-        - label: Angular
-        - label: Node.js
-        - label: Django
-        - label: Flask
-        - label: FastAPI
-        - label: Spring Boot
-        - label: .NET
-        - label: Ruby on Rails
-        - label: Express.js
-        - label: Next.js
-        - label: Docker
-        - label: Kubernetes
-        - label: AWS
-        - label: Azure
-        - label: GCP
-        - label: Other (specify below)
-
   - type: textarea
     id: professional-background
     attributes:
@@ -115,20 +85,6 @@ body:
         Notable projects: Built scalable microservices handling 1M+ requests/day, contributed to open-source project X
     validations:
       required: true
-
-  - type: textarea
-    id: code-review-experience
-    attributes:
-      label: Code Review Experience
-      description: Describe your experience with code reviews, mentoring, or teaching
-      placeholder: |
-        - Review 10-15 PRs per week at current job
-        - Mentored 3 junior developers over the past year
-        - Contributed reviews to open-source projects: [project names]
-        - Led code review workshops at company
-    validations:
-      required: true
-
   - type: textarea
     id: motivation
     attributes:
@@ -151,32 +107,6 @@ body:
         - "10+ hours per month (flexible)"
     validations:
       required: true
-
-  - type: checkboxes
-    id: review-preferences
-    attributes:
-      label: Review Preferences
-      description: What types of reviews are you most interested in?
-      options:
-        - label: DRAFT submissions (early feedback)
-        - label: FINAL submissions (comprehensive review)
-        - label: Both DRAFT and FINAL
-        - label: Follow-up reviews (adding to AI reviews)
-        - label: Any/all types
-
-  - type: textarea
-    id: preferred-technologies
-    attributes:
-      label: Technologies I'm Most Excited to Review
-      description: Which specific technologies, languages, or project types are you most interested in reviewing?
-      placeholder: |
-        - Backend services in Python/Go
-        - React applications
-        - DevOps/infrastructure projects
-        - CLI tools in Rust
-    validations:
-      required: false
-
   - type: textarea
     id: additional-info
     attributes:
@@ -188,7 +118,6 @@ body:
         - Conference talks: [links]
     validations:
       required: false
-
   - type: checkboxes
     id: acknowledgments
     attributes:
