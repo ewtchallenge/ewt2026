@@ -277,7 +277,7 @@ If it's extremely large (100+ files), consider:
 
 ### What's the difference between DRAFT and FINAL submissions?
 
-**DRAFT Submission:**
+**Draft Pull Request:**
 
 - Early submission for feedback
 - Primarily AI-reviewed
@@ -285,9 +285,9 @@ If it's extremely large (100+ files), consider:
 - Can be updated freely
 - Good for getting direction early
 
-**FINAL Submission:**
+**Final Submission (Ready for Review):**
 
-- Ready for comprehensive human review
+- Marked as "Ready for review"
 - Should be complete and tested
 - Updates after review may not be re-reviewed
 - Prioritized for human reviewers
@@ -302,18 +302,20 @@ Week 4: Submit FINAL → Get human review
 
 ### How do I submit a DRAFT vs FINAL?
 
-**Option 1: Use title tags**
+**To submit a Draft:**
 
-- DRAFT: `[DRAFT] January 2026 - Your Name`
-- FINAL: `[FINAL] January 2026 - Your Name`
+- Click the arrow next to "Create pull request"
+- Select "Create draft pull request"
 
-**Option 2: No DRAFT tag means FINAL**
+**To submit as Final:**
 
-- `January 2026 - Your Name` is treated as FINAL
+- Click "Create pull request" directly
+- Or convert your Draft PR by clicking "Ready for review"
 
-**Converting DRAFT to FINAL:**
+**Converting to Final:**
 
-- Edit your PR title to remove `[DRAFT]` or add `[FINAL]`
+- Go to your PR page
+- Click "Ready for review" button
 - Add a comment: `Ready for final review!`
 
 ### What should I write in the PR description?

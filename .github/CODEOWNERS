@@ -7,15 +7,42 @@
 # These are the primary maintainers
 
 - @engineeringwithtemi
+- @wolemercy
+- @themmyloluwaa
 
 # Documentation and guidelines
 
-\*.md @engineeringwithtemi
-/docs/\*\* @engineeringwithtemi
+
+*.md @engineeringwithtemi
+/docs/** @engineeringwithtemi
 CODE_OF_CONDUCT.md @engineeringwithtemi
 REVIEW_GUIDELINES.md @engineeringwithtemi
 CONTRIBUTING.md @engineeringwithtemi
 
 # GitHub configuration
 
-/.github/\*\* @engineeringwithtemi
+/.github/** @engineeringwithtemi
+
+# Language-Specific Reviews
+# C++
+*.cpp @ewtchallenge/doublec
+*.cc @ewtchallenge/doublec
+*.h @ewtchallenge/doublec
+
+# Go
+*.go @ewtchallenge/gophers
+
+# JavaScript / TypeScript
+*.js @ewtchallenge/javascripters
+*.ts @ewtchallenge/javascripters
+*.jsx @ewtchallenge/javascripters
+*.tsx @ewtchallenge/javascripters
+
+# Python
+*.py @ewtchallenge/pythonistas
+
+# Rust
+*.rs @ewtchallenge/rustaceans
+
+# C#
+*.cs @ewtchallenge/sharp

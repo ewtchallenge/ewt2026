@@ -7,6 +7,9 @@
 - [ ] [DRAFT] - Early submission for AI/optional human feedback
 - [ ] [FINAL] - Ready for human review
 
+<!-- Please ensure you selected "Create draft pull request" if this is work in progress! -->
+<!-- If you are ready for review, make sure the PR is not a draft (click "Ready for review") -->
+
 ### Basic Information
 
 **Month/Project:** <!-- e.g., January 2026 - Web Scraper -->
