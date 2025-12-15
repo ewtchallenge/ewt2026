@@ -14,28 +14,32 @@ jobs:
 
       - name: Validate submission structure
         run: |
-          # Check that PR only modifies files in submissions/[username]/
           PR_AUTHOR="${{ github.event.pull_request.user.login }}"
-
+          
           # Get changed files
           CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
 
           # Check each file
           INVALID=0
+          REGEX="^[a-z]+-2026/submissions/([^/]+)/"
+          
           for file in $CHANGED_FILES; do
-            # Allow changes only in:
-            # 1. [month]-2026/submissions/[PR_AUTHOR]/
-            # 2. Nowhere else
-            
-            if [[ ! "$file" =~ ^[a-z]+-2026/submissions/${PR_AUTHOR}/ ]]; then
-              echo "❌ Invalid file location: $file"
-              echo "You can only modify files in: [month]-2026/submissions/${PR_AUTHOR}/"
-              INVALID=1
+            if [[ "$file" =~ $REGEX ]]; then
+               SUBMISSION_USER="${BASH_REMATCH[1]}"
+               
+               if [ "$SUBMISSION_USER" != "$PR_AUTHOR" ]; then
+                  echo "❌ Unauthorized modification: $file"
+                  echo "You can only modify your own submission folder ($PR_AUTHOR), but you touched $SUBMISSION_USER's folder."
+                  INVALID=1
+               fi
+            else
+               # File is outside of any submission folder (e.g. root README, docs), allowed.
+               echo "ℹ️  Global file modified: $file (Allowed)"
             fi
           done
 
           if [ $INVALID -eq 1 ]; then
-            echo "::error::Submission validation failed. Please only modify files in your personal folder."
+            echo "::error::Submission validation failed."
             exit 1
           fi
 
@@ -44,20 +48,33 @@ jobs:
       - name: Check for required README
         run: |
           PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          
+          # Only check for README if the user has modified their OWN submission folder
+          # (Modifying global files doesn't require a submission README)
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+          
+          # Check if any file is in the user's submission path
+          REGEX="^([a-z]+-2026)/submissions/${PR_AUTHOR}/"
+          
+          # We need to find all unique submission folders touched by this user (could be multiple months theoretically)
+          TOUCHED_SUBMISSIONS=$(echo "$CHANGED_FILES" | grep -E "$REGEX" | awk -F/ '{print $1"/submissions/"$3}' | sort -u)
 
-          # Find which month folder was modified
-          MONTH_FOLDER=$(git diff --name-only origin/main...HEAD | grep -o '^[a-z]*-2026' | head -1)
-
-          if [ -z "$MONTH_FOLDER" ]; then
-            echo "::error::Could not determine month folder"
-            exit 1
+          if [ -z "$TOUCHED_SUBMISSIONS" ]; then
+             echo "ℹ️  No changes to your submission folder. Skipping README check."
+             exit 0
           fi
-
-          README_PATH="${MONTH_FOLDER}/submissions/${PR_AUTHOR}/README.md"
-
-          if [ ! -f "$README_PATH" ]; then
-            echo "::error::Missing required README.md at $README_PATH"
-            exit 1
+          
+          INVALID=0
+          for sub_dir in $TOUCHED_SUBMISSIONS; do
+             README_PATH="${sub_dir}/README.md"
+             if [ ! -f "$README_PATH" ]; then
+                echo "::error::Missing required README.md at $README_PATH"
+                INVALID=1
+             else
+                echo "✅ Found $README_PATH"
+             fi
+          done
+          
+          if [ $INVALID -eq 1 ]; then
+             exit 1
           fi
-
-          echo "✅ README.md found!"

@@ -555,57 +555,18 @@ Thank you for considering volunteering your time and expertise to help other eng
 
 ### Application Process
 
-1. **Create an Issue**
-
-   - Title: `Reviewer Volunteer - [Your Name]`
-   - Assign: `@engineeringwithtemi` (Temiloluwa Ojo) + any existing reviewer
-
-2. **In the Issue Description, Include:**
-
-```markdown
-## Reviewer Application
-
-### About Me
-
-**Name:** [Your Name]
-**GitHub:** @your-username
-**Location/Timezone:** [Optional, helps with coordination]
-
-### Experience
-
-**Years of Experience:** [Number]
-**Primary Expertise:** [Languages/Technologies you're strongest in]
-**Secondary Skills:** [Other areas you're comfortable reviewing]
-
-**Professional Background:**
-[Brief overview - current role, relevant experience, notable projects]
-
-### Why I Want to Review
-
-[Your motivation - give back to community, practice mentoring, stay sharp, etc.]
-
-### Availability
-
-**Estimated time commitment:** [e.g., "3-5 hours per month", "2-3 reviews per month"]
-**Preferred review types:** [DRAFT, FINAL, both, specific months/projects]
-**Technologies I'm excited to review:** [Languages/frameworks you want to focus on]
-
-### Code Review Experience
-
-[Any prior review/mentoring experience - work, open source, teaching, etc.]
-
-### Additional Info
-
-[Anything else we should know]
-
-### Acknowledgment
-
-- [ ] I have read the CODE_OF_CONDUCT.md
-- [ ] I have read the REVIEW_GUIDELINES.md
-- [ ] I commit to respectful, constructive, and helpful reviews
-- [ ] I understand this is a volunteer position
-```
-
+1. **Open a Reviewer Application Issue**
+   
+   - Go to the [Issues tab](https://github.com/ewtchallenge/ewt2026/issues)
+   - Click **New Issue**
+   - Click **Get Started** next to **Reviewer Volunteer Application**
+   
+2. **Fill out the Form**
+   
+   - Complete the questionnaire about your experience and availability.
+   - Confirm you've read the guidelines and code of conduct.
+   - Click **Submit New Issue**.
+   
 3. **Wait for Approval**
 
    - We'll review your application
@@ -649,6 +610,36 @@ We deeply appreciate our reviewers! Here's how we recognize your contributions:
 - **Guideline questions:** Create a GitHub Discussion or ask in reviewer channel
 - **Conflicts or issues:** Contact @engineeringwithtemi privately
 - **Suggestions for improvement:** We're always learning! Share your ideas
+
+---
+
+## Reviewer Tools
+
+We have developed a CLI tool to make checking out submissions easier.
+
+### `ewtc` CLI
+
+The `ewtc` tool automates downloading a submission, extracting the correct folder, and setting up a railpack container.
+Source code is available at: [github.com/ewtchallenge/ewtc-cli](https://github.com/ewtchallenge/ewtc-cli)
+
+**Installation:**
+```bash
+uv tool install git+https://github.com/ewtchallenge/ewtc-cli.git
+```
+
+**Usage:**
+```bash
+# Download and setup a submission
+ewtc -u [username] -m [month] -b [branch]
+
+# Example
+ewtc -u engineeringwithtemi -m january -b january
+```
+
+This will:
+1. Clone the repo
+2. Extract the user's submission to `./[month]-[username]`
+3. Build a container environment automatically (if Railpack is installed)
 
 ---
 
