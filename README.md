@@ -2,7 +2,7 @@
   <img src="./ewtc_logo.png" alt="EWT2026 Challenge Logo" width="200"/>
 </div>
 
-# ewt2026
+# ewtc2026
 
 ## Engineering With Temi 2026 Challenge
 
